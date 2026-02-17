@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { db } from '../../config/firebase';
 import { collection, addDoc, serverTimestamp, query, where, orderBy, onSnapshot, doc, updateDoc } from 'firebase/firestore';
 import { Send } from 'lucide-react';
-import { Message } from '../../types';
+import type { Message } from '../../types';
 import './Chat.css';
 
 interface ChatProps {

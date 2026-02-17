@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Map, { Marker, Popup } from 'react-map-gl';
+import Map, { Marker, Popup } from 'react-map-gl/mapbox';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import type { Yemma } from '../../types';
 import { Star } from 'lucide-react';
@@ -48,7 +48,7 @@ export function MapComponent({ yemmas, userLocation, onYemmaSelect }: MapCompone
     <div className="map-container">
       <Map
         {...viewport}
-        onMove={(evt) => setViewport(evt.viewState)}
+        onMove={(evt: { viewState: any }) => setViewport(evt.viewState)}
         style={{ width: '100%', height: '100%' }}
         mapStyle="mapbox://styles/mapbox/streets-v12"
         mapboxAccessToken={mapboxToken}

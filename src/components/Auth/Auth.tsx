@@ -71,7 +71,7 @@ export function Auth() {
       const user = result.user;
 
       // Check if user document exists
-      const userDoc = await setDoc(doc(db, 'users', user.uid), {
+      await setDoc(doc(db, 'users', user.uid), {
         uid: user.uid,
         email: user.email,
         displayName: user.displayName,
