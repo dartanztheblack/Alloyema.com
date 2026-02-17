@@ -4,12 +4,12 @@ import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || 'YOUR_API_KEY',
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || 'your-project.firebaseapp.com',
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || 'your-project',
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || 'your-project.appspot.com',
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || '123456789',
-  appId: import.meta.env.VITE_FIREBASE_APP_ID || '1:123456789:web:abcdef123456'
+  apiKey: "AIzaSyDVm8F5oYQtorV6JtPu45PZ9EIzKozmnRM",
+  authDomain: "hallo-yema.firebaseapp.com",
+  projectId: "hallo-yema",
+  storageBucket: "hallo-yema.firebasestorage.app",
+  messagingSenderId: "306179405289",
+  appId: "1:306179405289:web:8e639ee6389d15ca964778"
 };
 
 export const app = initializeApp(firebaseConfig);
