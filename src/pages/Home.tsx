@@ -7,13 +7,13 @@ import { useAuth } from '../hooks/useAuth';
 import { seedYemmas } from '../utils/seedData';
 import { db } from '../config/firebase';
 import { collection, query, where, getDocs, limit } from 'firebase/firestore';
-import { Yemma } from '../types';
+import type { Yemma } from '../types';
 import { Star, MapPin } from 'lucide-react';
 import './Home.css';
 
 export function Home() {
   const { user, loading } = useAuth();
-  const [yemmas, setYemmas] = useState<Yemma[]>([]);
+  const [, setYemmas] = useState<Yemma[]>([]);
   const [filteredYemmas, setFilteredYemmas] = useState<Yemma[]>([]);
   const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | undefined>();
   const [dataLoading, setDataLoading] = useState(true);

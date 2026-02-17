@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 interface GeolocationState {
   location: { lat: number; lng: number } | null;

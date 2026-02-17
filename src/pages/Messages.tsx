@@ -3,7 +3,7 @@ import { Navbar } from '../components/Navbar/Navbar';
 import { Chat } from '../components/Chat/Chat';
 import { useAuth } from '../hooks/useAuth';
 import { db } from '../config/firebase';
-import { collection, query, where, onSnapshot, doc, getDoc } from 'firebase/firestore';
+import { collection, query, where, onSnapshot, doc as docRef, getDoc } from 'firebase/firestore';
 import { Auth } from '../components/Auth/Auth';
 import { MessageCircle, ChevronRight } from 'lucide-react';
 import './Messages.css';
@@ -62,7 +62,7 @@ export function Messages() {
 
       if (!convs.has(key) || convs.get(key)!.lastMessageTime < data.createdAt?.toDate()) {
         // Fetch other user info
-        const userDoc = await getDoc(doc(db, 'users', otherUserId));
+        const userDoc = await getDoc(docRef(db, 'users', otherUserId));
         const userData = userDoc.data();
 
         convs.set(key, {

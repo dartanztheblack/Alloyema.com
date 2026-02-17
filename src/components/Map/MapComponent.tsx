@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Map, { Marker, Popup } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { Yemma } from '../../types';
+import type { Yemma } from '../../types';
 import { Star } from 'lucide-react';
 import './Map.css';
 

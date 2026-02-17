@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
 import { db } from '../../config/firebase';
 import { collection, query, where, getDocs } from 'firebase/firestore';
-import { Yemma } from '../../types';
+import type { Yemma } from '../../types';
 import './Search.css';
 
 interface SearchComponentProps {
